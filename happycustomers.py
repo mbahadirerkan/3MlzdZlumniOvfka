@@ -42,26 +42,9 @@ all = list()
 with open('ACME-HappinessSurvey2020.csv') as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=',')
     line_count = 0
-    for row in csv_reader:
+    for row in csv_reader:            
 
-        """
-        if(line_count != 0):
-            labels.append(int(row[0]))
-            line = list()
-            //count = 0
-            for a in row:
-
-              //all.append(int(a))
-              //if (count != 0):
-                //line.append(int(a))
-
-              //count = count + 1 
-
-            data.append(line)
-        """        
-            
-
-        #line_count = line_count + 1
+        #Converting the input to the integer.
         if line_count != 0:
           line = list()
           for a in row:
@@ -105,6 +88,7 @@ labelnum = len(labels) - testsize
 random.shuffle(all)
 line_count = 0
 
+#Seperating labels and data
 for row in all:
 
     count = 0
@@ -127,7 +111,7 @@ trainlabel = labels[:labelnum]
 testdata = data[labelnum:]
 testlabel = labels[labelnum:]
 
-print(testdata)
+#print(testdata)
 
 
 
